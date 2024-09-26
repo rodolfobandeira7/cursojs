@@ -1,0 +1,22 @@
+body {
+    background-color: #0f0; /* background-color é a propriedade da cor do plano de fundo */
+    color: #000; /* color é a propriedade da cor do texto */
+}
+h2 {
+    color: #444;
+    font-size: 46px;
+    text-decoration: underline;
+}
+/* ISSO É UM COMENTÁRIO CSS */
+.fonte-20px {
+    font-size: 40px;
+    margin-left: 20px;
+}
+#estilo-unico {
+    border: 2px solid red;
+    background-color: #3f3f3f;   
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px 10px;
+}
