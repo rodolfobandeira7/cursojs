@@ -1,22 +1,40 @@
-body {
-    background-color: #0f0; /* background-color é a propriedade da cor do plano de fundo */
-    color: #000; /* color é a propriedade da cor do texto */
+:root{
+    --cor-preto: #191516;
+    --cor-branco: #ffffff;
+    --cor-vinho: #A60067;
+    --cor-azul-duvidoso:#6153CC;
+    --cor-azul-clarin: #e5f4e3;
 }
-h2 {
-    color: #444;
-    font-size: 46px;
-    text-decoration: underline;
+
+body{
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
 }
-/* ISSO É UM COMENTÁRIO CSS */
-.fonte-20px {
-    font-size: 40px;
-    margin-left: 20px;
+/*
+.item-menu {
+    color: var(--cor-vinho);
 }
-#estilo-unico {
-    border: 2px solid red;
-    background-color: #3f3f3f;   
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 20px 10px;
+*/
+.item-menu{
+    color: var(--cor-azul-clarin)
+}
+ /*
+    :link
+    :active
+    :visited
+    :hover
+*/
+header nav a.item-menu{
+    color: var(--cor-branco);
+    text-decoration: none;
+    border: var(--cor-branco) 1px solid;
+    padding: 5px 10px;
+}
+header nav a.item-menu: visited {
+    background-color: var(--cor-branco)
+    color: var(--cor-vinho);
+}
+
+section{
+    min-height: 500px;
 }
