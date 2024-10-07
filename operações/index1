@@ -1,0 +1,9 @@
+const nome = 'Joao';
+console.log("Para juntar" + " dois textos e uma variavel: " + nome );
+console.log(`Para juntar dois textos e uma variavel: ${nome}`);
+console.log("Para juntar dois textos e uma variavel: %s", nome);
+
+//    %s   --- string
+//    %d   --- digit
+//    %o   --- object
+//    %i   --- int (especifico)
