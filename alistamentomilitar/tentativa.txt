@@ -1,0 +1,18 @@
+const readline = require("readline-sync");
+
+const idade = readline.question("Qual a sua idade?");
+if (idade >= "18"){
+    console.log(`ok`);
+} else {
+    console.log(`obrigado, Você não tem idade suficiente`);
+}
+const sexo = readline.question("Seu sexo é Masculino ou Feminino? ");
+if(sexo == "masculino"){
+    console.log("Bem-vindo ao exercíto brasileiro!");
+    else
+
+    require.readline.question("Desejar se alistar ao exército?");
+}
+if
+   
+
