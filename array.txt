@@ -1,0 +1,23 @@
+// Length - Tamanho / Quantidade de elementos
+// Push - Incluir no fim do Array
+// Unshift - Incluir no começo do Array
+// Pop - Remove o último elemento do Array
+// Shift - Remove o primeiro elemento do Array
+// indexOf - Localizar a posição/indice do elemento no Array
+
+const numeros = [1, 2, 3, 4, 5];
+
+// Dobrar cada número
+// Arrow Functions  
+const numerosDobrados = numeros.map(numero => numero * 2);
+
+// Funções Naturais
+const numerosDobradosNaturais = numeros.map(function (numero) {
+    return numero * 2;
+});
+
+const frutas = ["maça", "banana", "uva"];
+console.log(frutas);
+for (let indice = 0; indice < frutas.length; indice++) {
+    console.log('Indice', indice);
+    console.log('Valor', frutas[indice]);
