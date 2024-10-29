@@ -1,0 +1,118 @@
+1-----------------------------------
+
+//faca um programa diga que se ele é par ou impar.
+
+const readline = require ('readline-sync')
+
+let valor = 0;
+    valor = readline.questionInt("Informe um numero.");
+    if (valor % 2 == 0) {
+        console.log('Numero: ', valor);
+        console.log('O número é par')
+    } else {
+        console.log('Numero: ', valor);
+        console.log('O número é impar');
+    }
+
+2----------------------------------
+
+/**
+ * npm install readline-sync 
+ * 
+ * 2 - Escreva um programa que imprima os números de 1 à 20.
+ */
+for (let i = 1; i <= 20; i++) {
+    console.log(i);
+}
+
+3--------------------------------------------------
+
+const readline = require("readline-sync");
+
+// Pegar o nome do aluno
+const nome = readline.question("Qual o nome do aluno? ");
+
+// Pegar as notas do aluno
+const nota1 = readline.questionFloat("Qual a nota do 1 bimestre? ");
+const nota2 = readline.questionFloat("Qual a nota do 2 bimestre? ");
+const nota3 = readline.questionFloat("Qual a nota do 3 bimestre? ");
+const nota4 = readline.questionFloat("Qual a nota do 4 bimestre? ");
+
+// Calcular a média
+const media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+// Exibir o resultado
+console.log(`A media final foi de: ${media.toFixed(2)}`);
+// tofixed serve para fixar duas casa depois da virgula
+
+/** 
+ * Solicitar o nome do aluno, as 4 notas dele no ano, calcular a média final. 
+ * Se a média for maior ou igual 6, exibir "O aluno <nome> foi aprovado com a média <media>".
+ * Senão, exibir "O aluno <nome> foi reprovado com a média <media>".
+*/
+
+if (media >= "5"){
+    console.log(`O aluno ${nome} foi aprovado com a média final de ${media}`);
+} else {
+    console.log(`O aluno ${nome} foi reprovado com a média final de ${media}`);
+}
+
+4-------------------------------
+//* 4 - Escreva uma função chamada DOBRO que recebe um número e devolve o seu dobro.
+
+const readline = require('readline-sync');
+
+let dobro = 2;
+
+let numero = readline.questionInt("Informe um numero para dobrar: ");
+    dobro = dobro * numero;
+    console.log("dobro: ", dobro);
+
+5----------------------
+
+/**
+ * npm install readline-sync 
+ * 
+ * 5 - Escreva um programa que imprima os múltiplos de 3 e 5 simultaneamente entre 1 e 100.
+ */
+const readline = require('readline-sync');
+
+for (let i = 1; i <= 100; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+         // e   &&
+        // ou  ||
+        console.log(i);
+    }
+}
+
+6----------------
+
+// 6 - Escreva um programa que irá receber 2 valores e deverá informar qual é o maior e qual é o menor.
+
+const readline = require('readline-sync');
+
+valor1 = readline.questionFloat("Informe um numero.");
+valor2 = readline.questionFloat("Informe outro numero.");
+
+if (valor1 > valor2){
+    console.log (`o número ${valor1} é maior que ${valor2}`)
+}
+else {
+    console.log (`o número ${valor1} é menor que ${valor2}`)
+}
+
+7------------------
+// 7 - Escreva um programa que irá receber 4 números e deverá informar a soma de todos os números, o menor número e o maior número, além da média dos valores.
+
+const readline = require('readline-sync');
+
+const number1 = readline.questionFloat("Qual o primeiro numero? ");
+const number2 = readline.questionFloat("Qual o segundo numero? ");
+const number3 = readline.questionFloat("Qual o terceiro numero? ");
+const number4 = readline.questionFloat("Qual o quarto numero? ");
+
+let soma = (number1 + number2 + number3 + number4);
+console.log(`A soma dos 4 numeros foi de: ${soma.toFixed(2)}`);
+
+let media = (number1 + number2 + number3 + number4) / 4;
+console.log(`A média dos 4 numeros foi de: ${media.toFixed(2)}`);
