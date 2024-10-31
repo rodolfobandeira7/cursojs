@@ -1,0 +1,133 @@
+// 7 - Escreva um programa que irá receber 4 números e deverá informar a soma de todos os números, o menor número e o maior número, além da média dos valores.
+
+const readline = require('readline-sync');
+
+const number1 = readline.questionFloat("Qual o primeiro numero? ");
+const number2 = readline.questionFloat("Qual o segundo numero? ");
+const number3 = readline.questionFloat("Qual o terceiro numero? ");
+const number4 = readline.questionFloat("Qual o quarto numero? ");
+
+const soma = n1 + n2 + n3 + n4;
+const media = soma / 4;
+
+let maior = n1;
+let menor = n1;
+
+if (n2 > maior) {
+    maior = n2;
+}
+if (n3 > maior) {
+    maior = n3;
+}
+if (n4 > maior) {
+    maior = n4;
+}
+
+if (n2 < menor) {
+    menor = n2;
+}
+if (n3 < menor) {
+    menor = n3;
+}
+if (n4 < menor) {
+    menor = n4;
+}
+
+console.log(`A soma dos valores é: ${soma}`);
+console.log(`A média dos valores é: ${media.toFixed(2)}`);
+console.log(`O maior valor é: ${maior}`);
+console.log(`O menor valor é: ${menor}`);
+
+7---------------------------------
+/ Utilizando array
+const arrayNumeros = [];
+arrayNumeros.push(n1, n2, n3, n4);
+
+const somaArray = arrayNumeros.reduce( (soma, atual) => soma + atual, 0 );
+const mediaArray = somaArray / arrayNumeros.length;
+
+const arrayOrdenado = arrayNumeros.sort( (a, b) => a - b );
+const maiorArray = arrayOrdenado[arrayOrdenado.length - 1];
+const menorArray = arrayOrdenado[0];
+console.log('Array antes da ordenação: ', arrayNumeros);
+console.log('Array ordenado: ', arrayOrdenado);
+
+8---------------------
+
+/**
+ * npm install readline-sync 
+ * 
+ * 8 - Escreva um programa para calcular a soma dos números de 1 a 100.
+ * Saída esperada: "A soma dos números de 1 à 100 é 5050."
+ */
+const readline = require('readline-sync');
+
+const calcularSoma = () => {
+    let soma = 0;
+
+    for (let i = 1; i <= 100; i++) {
+        soma += i; // soma = soma + i;
+    }
+
+    console.log(`A soma dos números de 1 a 100 é ${soma}`);
+}
+
+calcularSoma();
+
+9---------------------
+
+ 
+ * 9 - Escreva um programa que tenha uma função chamada ehPrimo. Receba um número informado pelo usuário, passe ele para a função. Se o número for primo, deverá retornar true, senão false.
+ */
+
+const readline = require('readline-sync');
+
+function ehPrimo(numero) {
+    for (let i = 2; i < numero; i++) {
+        if (numero % i == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+const num = readline.questionInt("Informe um numero: ");
+
+if (ehPrimo(num)) {
+    console.log(`O número ${num} é um número primo.`);
+} else {
+    console.log(`O número ${num} não é um número primo.`);
+}
+
+10------------------------
+
+/**
+ * npm install readline-sync 
+ * 
+ * 10 - Escreva um programa que receba vários números pelo usuário, números positivos e negativos. Quando o usuário digitar 0 (zero), deverá parar de pedir números para o usuário e deverá retornar QUANTOS NUMEROS POSITIVOS FORAM INFORMADOS, QUANTOS NUMEROS NEGATIVOS FORAM INFORMADOS e QUANTOS NUMEROS FORAM INFORMADOS AO TODO.
+ */
+const readline = require('readline-sync');
+
+let quantidadePositivo = 0;
+let quantidadeNegativo = 0;
+
+let numeroInformado;
+
+while(numeroInformado != 0) {
+    numeroInformado = readline.questionInt("Informe um numero: ");
+
+    if (numeroInformado != 0) {
+        if (numeroInformado > 0) {
+            quantidadePositivo++;
+        } else {
+            quantidadeNegativo++;
+        }
+    }
+}
+
+console.log(`A quantidade de números informados foi ${quantidadeNegativo + quantidadePositivo}`);
+console.log(`A quantidade de números positivos foi ${quantidadePositivo}`);
+console.log(`A quantidade de números negativos foi ${quantidadeNegativo}`);
+
+
